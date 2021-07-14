@@ -21,3 +21,6 @@ options(
 
 # fix Hugo version
 options(blogdown.hugo.version = "0.83.1")
+
+# fix copying statis files, invalid argument
+options(blogdown.hugo.args = "--noTimes")
