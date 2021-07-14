@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on A Hugo website</title>
-    <link>/categories/r/</link>
+    <link>https://monicawebsite.netlify.app/categories/r/</link>
     <description>Recent content in R on A Hugo website</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://monicawebsite.netlify.app/categories/r/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Schedule R scripts on Linux/Unix</title>
-      <link>/2021/07/06/schedule-r-scripts-on-linux/unix/</link>
+      <link>https://monicawebsite.netlify.app/2021/07/06/schedule-r-scripts-on-linux/unix/</link>
       <pubDate>Tue, 06 Jul 2021 00:00:00 +0000</pubDate>
       
-      <guid>/2021/07/06/schedule-r-scripts-on-linux/unix/</guid>
+      <guid>https://monicawebsite.netlify.app/2021/07/06/schedule-r-scripts-on-linux/unix/</guid>
       <description>2 packages are distributed on CRAN by BNOSAC and they allow R users to automate R processes on specific timepoints from R itself.
  One package for scheduling R scripts and processes on Windows (taskscheduleR) and Another package for scheduling R scripts and processes on Unix/Linux(cronR)  This blog only covers cronR on Linux/Unix system. To make it easy for beginning R users, an Rstudio addin was developed. The RStudio addin basically allows you to select an R script and schedule it at specific timepoints.</description>
     </item>

@@ -1,5 +1,5 @@
-#baseurl: https://monicawebsite.netlify.app/
-baseurl: /
+baseurl: https://monicawebsite.netlify.app/
+#baseurl: /
 languageCode: en-us
 title: A Hugo website
 theme: hugo-lithium
