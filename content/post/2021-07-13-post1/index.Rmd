@@ -31,7 +31,7 @@ install.packages('shinyFiles')
 
 ### RStudio addin
 Just click Addins > Schedule R scripts on Linux/Unix in the top bar, then the Cron job scheduler pops up.
- ![addin](/wuc66/wuc66.github.io/images/qinp1/post1_addin.png)
+ ![addin](/PengyanQin/my-blogdown/public/images/post1_addin.png)
 
 - __Select file__: choose the R script you want to automate, then the entire path would be copied to __Selected Rscript__
 - __Launch date__ and __Launch hour__: when will the cronjob be executed for the first time, the default value is the current time in Central European Summer Time (CEST)
@@ -43,7 +43,7 @@ Just click Addins > Schedule R scripts on Linux/Unix in the top bar, then the Cr
 - __Job identifier__: an identification to give the cronjob task for easier revision in the future
 
 After creating the job, you can manage existing jobs in the addin as well.
-  ![manage](/wuc66/wuc66.github.io/images/qinp1/post2_manage.png)
+  ![manage](/PengyanQin/my-blogdown/public/images/post2_manage.png)
 
 - __Show current crontab schedule__ would display all existing cronjob schedules, it doesn't matter whether they are saved to crontab or not, except when __Load selected schedule__, only saved cronjobs in the crontab would be displayed.
 - To check one specific job in the current schedule, you can __Select job__ by Job identifier to __Show job__ or __Delete job__ explicitly. 
