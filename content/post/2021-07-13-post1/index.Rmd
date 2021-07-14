@@ -1,0 +1,52 @@
+---
+title: "Schedule R scripts on Linux/Unix"
+author: "Monica Qin"
+date: 2021-07-06
+categories: ["R"]
+tags: []
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE)
+```
+
+2 packages are distributed on CRAN by [BNOSAC](http://www.bnosac.be) and they allow R users to automate R processes on specific timepoints from R itself.
+
+* One package for scheduling R scripts and processes on Windows ([taskscheduleR](https://cran.r-project.org/web/packages/taskscheduleR/index.html)) and
+* Another package for scheduling R scripts and processes on Unix/Linux([cronR](https://cran.r-project.org/web/packages/cronR/index.html))
+
+This blog only covers cronR on Linux/Unix system. To make it easy for beginning R users, an Rstudio addin was developed. The RStudio addin basically allows you to select an R script and schedule it at specific timepoints. It does this by copying the script to your launch/log folder and setting up a cronjob for that script. Next we'll see how to install and use this addin.
+
+### Installation
+The package is on CRAN. To install, just run
+```{r cronR, echo=TRUE, eval = FALSE}
+install.packages('cronR')
+```
+To add Rstudio addin, also install miniUI, shiny and shinyFiles 
+```{r addin, echo=TRUE, eval = FALSE}
+install.packages('miniUI')
+install.packages('shiny')
+install.packages('shinyFiles')
+```
+
+### RStudio addin
+Just click Addins > Schedule R scripts on Linux/Unix in the top bar, then the Cron job scheduler pops up.
+ ![addin](/wuc66/wuc66.github.io/images/qinp1/post1_addin.png)
+
+- __Select file__: choose the R script you want to automate, then the entire path would be copied to __Selected Rscript__
+- __Launch date__ and __Launch hour__: when will the cronjob be executed for the first time, the default value is the current time in Central European Summer Time (CEST)
+- __Schedule__: how often will the cronjob be executed, if the predefined frequency is not applicable, check ASIS to customize the frequency for your cronjob
+- __ASIS cron schedule__: use cron schedule expression to customize your cronjob frequency, the syntax and example can be found [here](https://crontab.guru/)
+- __Job description__: a short description of the job and its purpose
+- __Job tags__: optional; a set of tags, used for easy listing and retrieval of cron jobs
+- __Additional arguments to Rscript__: optional; provide the inputs to the Rscripts if needed
+- __Job identifier__: an identification to give the cronjob task for easier revision in the future
+
+After creating the job, you can manage existing jobs in the addin as well.
+  ![manage](/wuc66/wuc66.github.io/images/qinp1/post2_manage.png)
+
+- __Show current crontab schedule__ would display all existing cronjob schedules, it doesn't matter whether they are saved to crontab or not, except when __Load selected schedule__, only saved cronjobs in the crontab would be displayed.
+- To check one specific job in the current schedule, you can __Select job__ by Job identifier to __Show job__ or __Delete job__ explicitly. 
+- __Save Crontab__ enables you to save all current cronjob schedules to a .cron file, then you can load this cron file by __Select crontab schedule__ and __Load selected schedule__.
+
+Note: If a cronjob is scheduled but not saved in crontab, after loading another selected schedule, the unsaved cronjob would be deleted automatically. So I would recommend always saving your cronjob to crontab schedule explicitly.
